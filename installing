@@ -1,0 +1,46 @@
+Open the Terminal
+In the terminal---> cd project path(Drag and Drop the project folder)
+touch podile
+open-e podfile
+In that podfile---> First go and search CocoaPods---> https://cocoapods.org/
+In that searchfield u search GoogleMaps---> Right u see installation guide--->copy that code it seems like
+target 'MyApp' do
+  pod 'GoogleMaps', '~> 3.1'
+end
+Change ur project name like this(target 'MyApp' do)--->s(target 'Gmap' do)
+Same like that again search GooglePlaces in CocoaPods and copy the code like this--->  pod 'GooglePlaces', '~> 3.1'
+Paste the both GoogleMaps and GooglePlaces in podfile
+And to continue with 4th Step
+To install the pod--->pod install
+After installing--->Go to Xcode--->In that viewcontroller--->To import the GoogleMaps and GooglePlaces--->And to declare the operations of the maps
+
+let camera = GMSCameraPosition.camera(withLatitude: 13.003387, longitude:     80.255043, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 13.003387, longitude:     80.255043)
+        marker.title = "Adayar"
+        marker.snippet = "CHENNAI"
+        marker.map = mapView
+        
+Go to AppDelegate--->To import the GoogleMaps and GooglePlaces--->To declare the API key of the map
+Website Tutorials for to generate the API key---> https://developers.google.com/maps/documentation/javascript/get-api-key
+After generating the APIkey--->To declare in AppDelegate
+Like this--->    
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyCbJqxc25w9KSZjeCMr5I_Mg3y0")
+        GMSPlacesClient.provideAPIKey("AIzaSyCbJqxc25w9KSZjeCMr5I_Mg3y0")
+        return true
+After declare the operations..,
+Goto Build Settings--->Search--->Reflected MetadataLevel--->None
+                                 Enable Bitcode--->No
+Goto info.plist--->Add the Components--->LSApplicationQueriesSchemes to change the type as Array
+In that LSApplicationQueriesSchemes--->To add two items--->googlechromes
+                                                           comgooglemaps
+Again come back to Terminal--->To update the Pod--->pod update
+After Finishing the Pod updation--->Drag and Drop the project folder in that terminal
+After that--->open .
+Project Folder will open--->To open the workspace--->To run the Project
