@@ -1,0 +1,35 @@
+Open your terminal in MAC machine.
+
+
+STEP 1 - sudo gem install cocoapods
+STEP 2 - cd select your project location
+STEP 3 - touch podfile/pod init
+STEP 4 - open -e podfile ---------------------------------------------------------------------------------------------- https://cocoapods.org/
+Sample Projects from github
+AmDots:
+AMDots is a loading indicator with dots moving like google loading, there is three type of the loading, scale, jump and shake, each one of them gives you a cool loading to show to the user
+Project 1 :
+Cocoapods
+https://cocoapods.org/pods/AMDots
+Github https://github.com/Abedalkareem/AMDots CocoaControls https://www.cocoacontrols.com/controls/amdots
+Installation Guide
+target 'MyApp' do
+pod 'AMDots', '~> 1.0'
+end
+
+ ----------------------------------------------------------------------------------------------
+Project 2 :
+Alamofire is an HTTP networking library written in Swift. Cocoapods
+https://cocoapods.org/pods/Alamofire
+Github
+https://github.com/Alamofire/Alamofire
+
+Installation Guide
+target 'MyApp' do
+pod 'Alamofire', '~> 4.7'
+end
+----------------------------------------------------------------------------------------------
+STEP 5 - pod install
+STEP 6 -Close your current Xcode project and open your current workspace project
+What is workspace ?
+The project contains multiple project that is called workspace.
